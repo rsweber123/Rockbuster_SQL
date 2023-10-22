@@ -1,0 +1,32 @@
+# here is a query using common table expressions to find the countries where the top five customers live
+
+WITH top_customers (customer_id, first, last, tot_pay, city, country) AS 
+(SELECT customer.customer_id,
+	    customer.first_name,
+	    customer.last_name,
+	    SUM(payment.amount) AS "Total Payments",
+	    city.city,
+	    country.country,
+ 	    country.country_id
+FROM customer customer
+INNER JOIN payment ON payment.customer_id = customer.customer_id
+INNER JOIN address ON customer.address_id = address.address_id
+INNER JOIN city ON address.city_id = city.city_id
+INNER JOIN country ON city.country_id = country.country_id
+WHERE country.country_id IN (44,23,103,50,60,15,85,75,97,45)
+	  AND city.city_id IN(42,261,499,46,118,246,197,451,474,317)
+GROUP BY customer.customer_id, customer.first_name, customer.last_name, 
+ 		 city.city_id, country.country, country.country_id
+ORDER BY SUM(payment.amount) DESC
+LIMIT 5)
+
+SELECT C.country,
+	   COUNT(DISTINCT A.customer_id) AS "All Customer Count",
+	   COUNT(DISTINCT top_customers.customer_id) AS "Top Customers"
+FROM country C
+INNER JOIN city B ON B.country_id = C.country_id
+INNER JOIN address ON B.city_id = address.city_id
+INNER JOIN customer A ON address.address_id = A.address_id
+LEFT JOIN top_customers ON C.country_id = top_customers.country_id
+GROUP BY C.country
+ORDER BY "Top Customers" DESC
