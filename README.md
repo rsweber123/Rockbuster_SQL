@@ -9,12 +9,12 @@ we worked with Rockbuster to help identify where to best target their marketing 
 
 The Rockbuster database contained the following data
 
-## Fact Tables
+### Fact Tables
 
 - Payment
 - Rental
 
-## Dimension Tables
+### Dimension Tables
 
 - Film_actor
 - Film_category
