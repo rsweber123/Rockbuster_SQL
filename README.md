@@ -30,7 +30,7 @@ The Rockbuster database contained the following data
 - City
 - Country
 
-For a more detailed description of these table see the [Data_dictionary](https://github.com/rsweber123/Rockbuster_SQL/blob/1db71b4aacd025bcd681cfe4a688f56eb228cda7/Data%20Dictionary%203.10.pdf)
+For a more detailed description of these table see the [Data dictionary 3.10.PDF](https://github.com/rsweber123/Rockbuster_SQL/blob/1db71b4aacd025bcd681cfe4a688f56eb228cda7/Data%20Dictionary%203.10.pdf)
 
 # Visualizations
 
