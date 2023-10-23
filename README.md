@@ -3,7 +3,32 @@ CareerFoundry Data Analysis portfolio project.  Rockbuser is a movie rental comp
 
 # Objective
 
+we worked with Rockbuster to help identify where to best target their marketing efforts in a move to a streaming service.   We did this by determining where their previous business was strongest and what types of moves sold the best.  
+
 # Data
+
+The Rockbuster database contained the following data
+
+## Fact Tables
+
+- Payment
+- Rental
+
+## Dimension Tables
+
+- Film_actor
+- Film_category
+- Customer
+- Staff
+- Address
+- Film
+- Store
+- Actor
+- Category
+- Inventory
+- Language
+- City
+- Country
 
 # Visualizations
 
