@@ -30,6 +30,8 @@ The Rockbuster database contained the following data
 - City
 - Country
 
+For a more detailed description of these table see the [Data_dictionary](https://github.com/rsweber123/Rockbuster_SQL/blob/1db71b4aacd025bcd681cfe4a688f56eb228cda7/Data%20Dictionary%203.10.pdf)
+
 # Visualizations
 
 Visualizations were created using Tableau.  [Those visualizations can be found here](https://public.tableau.com/views/Immersion3_10/RatingSummary?:language=en-US&:display_count=n&:origin=viz_share_link)
